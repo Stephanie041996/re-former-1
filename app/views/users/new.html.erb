@@ -11,8 +11,6 @@
 </form>
 -->
 
-
-
 <%= form_with model: @user  do |form| %>
 <div>
 <%= form.label :name, "Full name" %>
@@ -28,3 +26,5 @@
 </div>
   <%= form.submit %>
 <% end %>
+
+<%= link_to "Users", root_path %>
