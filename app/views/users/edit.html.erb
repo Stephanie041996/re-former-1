@@ -1,0 +1,20 @@
+<%= error(@user)%>
+
+<%= form_with model: @user, method: :patch do |form| %>
+<div>
+<%= form.label :name, "Full name" %>
+  <%= form.text_field :username, placeholder: 'Edit your name here' %>
+</div>
+<div>
+  <%= form.label :email, "Email" %>
+  <%= form.email_field :email, placeholder: 'Edit your mail' %>
+</div>
+<div>
+  <%= form.label :password, "Password" %>
+  <%= form.password_field :password, placeholder: 'edit your strong password here', class: 'the-class' %>
+</div>
+  <%= form.submit %>
+<% end %>
+
+<%= link_to "Users", root_path%>
+
