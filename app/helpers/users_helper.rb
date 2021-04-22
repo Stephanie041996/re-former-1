@@ -1,7 +1,5 @@
 module UsersHelper
   def error(user)
-    if user.errors.any?
-      user.errors.full_messages.each {|msg| msg}
-    end
+    user.errors.full_messages.each { |msg| } if user.errors.any?
   end
 end
